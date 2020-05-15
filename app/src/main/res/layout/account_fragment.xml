@@ -1,223 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/star_background"
-    android:orientation="vertical"
+    android:id="@+id/account_fragment_container"
     tools:context=".ui.account.AccountFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/checking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/account_fragment_header"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="My Account"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/account_fragment_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/my_account"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/account_card"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginTop="24dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="14dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/account_fragment_header">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/account_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/account_fragment_header">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/account_holder_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="16dp"
-                    android:text="Abdul Mohammad"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/account_holder_email"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="2dp"
-                    android:text="abdulm@gmail.com"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textColor="@color/semiBlack"
-                    android:textSize="14sp" />
-
-                <View
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="24dp"
-                    android:background="@color/semiBlack" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/account_profile"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="12dp"
-                    android:drawableLeft="@drawable/ic_person_outline_black_24dp"
-                    android:drawableStart="@drawable/ic_person_outline_black_24dp"
-                    android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
-                    android:drawablePadding="16dp"
-                    android:text="My profile"
-                    android:textStyle="bold"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/account_holder_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp"
+                        android:text="Abdul Mohammad"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/semiBlack" />
+                    <TextView
+                        android:id="@+id/account_holder_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="2dp"
+                        android:text="abdulm@gmail.com"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="@color/semiBlack"
+                        android:textSize="14sp" />
 
-                <TextView
-                    android:id="@+id/account_orders"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="12dp"
-                    android:drawableLeft="@drawable/ic_menu_black_24dp"
-                    android:drawableStart="@drawable/ic_menu_black_24dp"
-                    android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
-                    android:drawablePadding="16dp"
-                    android:text="My orders"
-                    android:textStyle="bold"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="16sp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="24dp"
+                        android:background="@color/semiBlack" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/semiBlack" />
+                    <TextView
+                        android:id="@+id/account_my_profile_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+                        android:drawableStart="@drawable/ic_person_outline_black_24dp"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                        android:drawablePadding="16dp"
+                        android:text="@string/my_profile"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/account_address_book"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="12dp"
-                    android:drawableLeft="@drawable/ic_location_on_black_24dp"
-                    android:drawableStart="@drawable/ic_location_on_black_24dp"
-                    android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
-                    android:drawablePadding="16dp"
-                    android:text="Address book"
-                    android:textStyle="bold"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="16sp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/semiBlack" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/semiBlack" />
+                    <TextView
+                        android:id="@+id/account_my_orders_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:drawableLeft="@drawable/ic_menu_black_24dp"
+                        android:drawableStart="@drawable/ic_menu_black_24dp"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                        android:drawablePadding="16dp"
+                        android:text="@string/my_orders"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/account_contact_us"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="12dp"
-                    android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
-                    android:drawableStart="@drawable/ic_mail_outline_black_24dp"
-                    android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
-                    android:drawablePadding="16dp"
-                    android:text="Contact us"
-                    android:textStyle="bold"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="16sp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/semiBlack" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/semiBlack" />
+                    <TextView
+                        android:id="@+id/account_address_book_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                        android:drawableStart="@drawable/ic_location_on_black_24dp"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                        android:drawablePadding="16dp"
+                        android:text="@string/address_book"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/account_rate_our_app"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="12dp"
-                    android:drawableLeft="@drawable/ic_star_border_black_24dp"
-                    android:drawableStart="@drawable/ic_star_border_black_24dp"
-                    android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
-                    android:drawablePadding="16dp"
-                    android:text="Rate our app"
-                    android:textStyle="bold"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="16sp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/semiBlack" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/semiBlack" />
+                    <TextView
+                        android:id="@+id/account_contact_us_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+                        android:drawableStart="@drawable/ic_mail_outline_black_24dp"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                        android:drawablePadding="16dp"
+                        android:text="@string/contact_us"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/account_settings"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="12dp"
-                    android:drawableLeft="@drawable/ic_settings_outline_black_24dp"
-                    android:drawableStart="@drawable/ic_settings_outline_black_24dp"
-                    android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                    android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
-                    android:drawablePadding="16dp"
-                    android:text="Settings"
-                    android:textStyle="bold"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="16sp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/semiBlack" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/semiBlack" />
+                    <TextView
+                        android:id="@+id/account_rate_our_app_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:drawableLeft="@drawable/ic_star_border_black_24dp"
+                        android:drawableStart="@drawable/ic_star_border_black_24dp"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                        android:drawablePadding="16dp"
+                        android:text="@string/rate_our_app"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="16sp" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/sign_out_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="32dp"
-                    android:paddingLeft="50dp"
-                    android:paddingTop="12dp"
-                    android:paddingRight="50dp"
-                    android:paddingBottom="12dp"
-                    android:text="SIGN OUT"
-                    android:textSize="18sp"
-                    app:backgroundTint="@color/colorPrimary"
-                    app:shapeAppearance="@style/MaterialButton" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/semiBlack" />
 
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="32dp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:id="@+id/account_settings_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:drawableLeft="@drawable/ic_settings_outline_black_24dp"
+                        android:drawableStart="@drawable/ic_settings_outline_black_24dp"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                        android:drawablePadding="16dp"
+                        android:text="@string/settings"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="16sp" />
 
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/account_card" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/semiBlack" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sign_out_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="32dp"
+                        android:paddingLeft="50dp"
+                        android:paddingTop="12dp"
+                        android:paddingRight="50dp"
+                        android:paddingBottom="12dp"
+                        android:text="@string/sign_out"
+                        android:textSize="18sp"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:shapeAppearance="@style/MaterialButton" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/account_card" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

@@ -12,6 +12,7 @@
         android:orientation="horizontal" >
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_one"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -27,6 +28,7 @@
             app:chipIcon="@drawable/ic_personalised_services_black_14dp" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_two"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -42,6 +44,7 @@
             app:chipIcon="@drawable/ic_entertainment_black_14dp" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_three"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -57,6 +60,7 @@
             app:chipIcon="@drawable/ic_amenieties_black_14dp" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_four"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"

@@ -21,6 +21,7 @@ public class RegionAdapter extends ArrayAdapter<RegionItem> {
         super(context, 0, regionItemArrayList);
     }
 
+    // ctrl+o
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {

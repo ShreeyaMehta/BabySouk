@@ -1,424 +1,512 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/star_background"
-    android:orientation="vertical"
     android:id="@+id/contact_us_fragment_container"
     tools:context=".ui.account.contact.ContactUsFragment">
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/contact_fragment_header"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="32dp"
-            android:text="Contact Us"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textSize="24sp" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/account_card"
+        android:layout_height="wrap_content">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="14dp">
+            android:orientation="vertical">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <TextView
+                android:id="@+id/contact_fragment_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:text="@string/title_contact_us"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textSize="24sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/account_card"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="14dp">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/call_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginRight="24dp"
-                    android:background="@drawable/transparent_bg_bordered_button"
-                    android:padding="8dp"
-                    android:text="Call"
-                    android:textAllCaps="false"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="14sp"
-                    app:shapeAppearance="@style/AccountMaterialButton"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/call_us_text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="24dp"
-                    android:drawableStart="@drawable/ic_call_outline_black_24dp"
-                    android:drawableLeft="@drawable/ic_call_outline_black_24dp"
-                    android:drawablePadding="16dp"
-                    android:padding="8dp"
-                    android:text="Call us : +971 600 587 003"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="14sp"
-                    app:layout_constraintEnd_toStartOf="@+id/call_button"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/call_button" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/call_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/only_border"
+                        android:padding="8dp"
+                        android:text="@string/call"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        app:shapeAppearance="@style/CartMaterialButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <View
-                    android:id="@+id/contact_line_one"
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginRight="24dp"
-                    android:background="@color/semiBlack"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/call_button" />
+                    <TextView
+                        android:id="@+id/call_us_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="24dp"
+                        android:drawableStart="@drawable/ic_call_outline_black_24dp"
+                        android:drawableLeft="@drawable/ic_call_outline_black_24dp"
+                        android:drawablePadding="16dp"
+                        android:padding="8dp"
+                        android:text="Call us : +971 600 587 003"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@+id/call_button"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/call_button" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/whatsapp_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginRight="24dp"
-                    android:background="@drawable/transparent_bg_bordered_button"
-                    android:text="Chat"
-                    android:textAllCaps="false"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="14sp"
-                    android:padding="8dp"
-                    app:shapeAppearance="@style/AccountMaterialButton"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/contact_line_one" />
+                    <View
+                        android:id="@+id/contact_line_one"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@color/semiBlack"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/call_button" />
 
-                <TextView
-                    android:id="@+id/whatsapp_text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:gravity="center_vertical"
-                    android:drawableStart="@drawable/ic_whatsapp_outline_black_24dp"
-                    android:drawableLeft="@drawable/ic_whatsapp_outline_black_24dp"
-                    android:drawablePadding="16dp"
-                    android:padding="8dp"
-                    android:text="WhatsApp"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="14sp"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/whatsapp_button"
-                    app:layout_constraintEnd_toStartOf="@+id/call_button"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/whatsapp_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/only_border"
+                        android:text="@string/chat"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        app:shapeAppearance="@style/CartMaterialButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/contact_line_one" />
 
-                <View
-                    android:id="@+id/contact_line_two"
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginRight="24dp"
-                    android:background="@color/semiBlack"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/whatsapp_button" />
+                    <TextView
+                        android:id="@+id/whatsapp_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:gravity="center_vertical"
+                        android:drawableStart="@drawable/ic_whatsapp_outline_black_24dp"
+                        android:drawableLeft="@drawable/ic_whatsapp_outline_black_24dp"
+                        android:drawablePadding="16dp"
+                        android:padding="8dp"
+                        android:text="@string/whatsapp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="14sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/whatsapp_button"
+                        app:layout_constraintEnd_toStartOf="@+id/call_button"
+                        app:layout_constraintStart_toStartOf="parent" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/live_chat_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginRight="24dp"
-                    android:background="@drawable/transparent_bg_bordered_button"
-                    android:text="Chat"
-                    android:textAllCaps="false"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="14sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/contact_line_two" />
+                    <View
+                        android:id="@+id/contact_line_two"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@color/semiBlack"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/whatsapp_button" />
 
-                <TextView
-                    android:id="@+id/live_chat_text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:drawableStart="@drawable/ic_live_chat_black_24dp"
-                    android:drawableLeft="@drawable/ic_live_chat_black_24dp"
-                    android:drawablePadding="16dp"
-                    android:padding="8dp"
-                    android:text="Live Chat 24 X 7"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="14sp"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/live_chat_button"
-                    app:layout_constraintEnd_toStartOf="@+id/call_button"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/live_chat_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/only_border"
+                        android:text="@string/chat"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        app:shapeAppearance="@style/CartMaterialButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/contact_line_two" />
 
-                <View
-                    android:id="@+id/contact_line_three"
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginRight="24dp"
-                    android:background="@color/semiBlack"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/live_chat_button" />
+                    <TextView
+                        android:id="@+id/live_chat_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:drawableStart="@drawable/ic_live_chat_black_24dp"
+                        android:drawableLeft="@drawable/ic_live_chat_black_24dp"
+                        android:drawablePadding="16dp"
+                        android:padding="8dp"
+                        android:text="Live Chat 24 X 7"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="14sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/live_chat_button"
+                        app:layout_constraintEnd_toStartOf="@+id/call_button"
+                        app:layout_constraintStart_toStartOf="parent" />
 
-                <TextView
-                    android:id="@+id/click_collect_text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="10dp"
-                    android:drawableStart="@drawable/ic_location_on_black_24dp"
-                    android:drawableLeft="@drawable/ic_location_on_black_24dp"
-                    android:drawablePadding="16dp"
-                    android:padding="8dp"
-                    android:text="@string/click_collect_text"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="14sp"
-                    app:layout_constraintTop_toBottomOf="@+id/contact_line_three"
-                    app:layout_constraintEnd_toStartOf="@+id/call_button"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    <View
+                        android:id="@+id/contact_line_three"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@color/semiBlack"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/live_chat_button" />
 
-                <TextView
-                    android:id="@+id/click_collect_works_text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="10dp"
-                    android:padding="8dp"
-                    android:text="@string/how_click_collects_works"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="12sp"
-                    app:layout_constraintTop_toBottomOf="@+id/click_collect_text"
-                    app:layout_constraintEnd_toStartOf="@+id/call_button"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    <TextView
+                        android:id="@+id/click_collect_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginTop="10dp"
+                        android:drawableStart="@drawable/ic_location_on_black_24dp"
+                        android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                        android:drawablePadding="16dp"
+                        android:padding="8dp"
+                        android:text="@string/click_collect_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/contact_line_three"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
 
-                <View
-                    android:id="@+id/contact_line_four"
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginRight="24dp"
-                    android:background="@color/semiBlack"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/click_collect_works_text" />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/dubai_warehouse_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:text="@string/dubai_warehouse_text"
+                        android:padding="24dp"
+                        android:textSize="14sp"
+                        android:background="@drawable/rounded_rectangle_stroke_bg"
+                        style="@style/Widget.MaterialComponents.TextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/click_collect_text" />
 
-                <TextView
-                    android:id="@+id/write_to_us_text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="10dp"
-                    android:drawableStart="@drawable/ic_write_to_us_black_24dp"
-                    android:drawableLeft="@drawable/ic_write_to_us_black_24dp"
-                    android:drawablePadding="16dp"
-                    android:padding="8dp"
-                    android:text="Write to us"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="14sp"
-                    app:layout_constraintTop_toBottomOf="@+id/contact_line_four"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/riyadh_warehouse_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginTop="8dp"
+                        android:padding="24dp"
+                        android:textSize="14sp"
+                        android:background="@drawable/rounded_rectangle_stroke_bg"
+                        android:text="@string/riyadh_warehouse_text"
+                        style="@style/Widget.MaterialComponents.TextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dubai_warehouse_text" />
+                    <!--<com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/address_text_input_layout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginRight="32dp"
+                        android:theme="@style/TextInputLayoutAppearance"
+                        app:boxBackgroundColor="@color/colorOriginal"
+                        app:boxCornerRadiusBottomEnd="14dp"
+                        app:boxCornerRadiusBottomStart="14dp"
+                        app:boxCornerRadiusTopEnd="14dp"
+                        app:boxCornerRadiusTopStart="14dp"
+                        app:boxStrokeColor="@color/semiBlack"
+                        app:boxStrokeWidth="1dp"
+                        app:hintEnabled="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/click_collect_text" >
 
-                <TextView
-                    android:id="@+id/name_text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Name"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="14sp"
-                    app:layout_constraintTop_toBottomOf="@+id/write_to_us_text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
 
-                <EditText
-                    android:id="@+id/name_edit_text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginRight="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:hint="Your Name"
-                    android:inputType="textPersonName"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="14sp"
-                    app:layout_constraintTop_toBottomOf="@+id/name_text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    </com.google.android.material.textfield.TextInputLayout>-->
 
-                <TextView
-                    android:id="@+id/country_text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Country"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="14sp"
-                    app:layout_constraintTop_toBottomOf="@+id/name_edit_text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    <TextView
+                        android:id="@+id/click_collect_works_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="10dp"
+                        android:padding="8dp"
+                        android:text="@string/how_click_collects_works"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@+id/riyadh_warehouse_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
 
-                <Spinner
-                    android:id="@+id/country_spinner"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginRight="24dp"
-                    android:hint="Your Name"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="14sp"
-                    app:layout_constraintTop_toBottomOf="@+id/country_text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    <View
+                        android:id="@+id/contact_line_four"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@color/semiBlack"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/click_collect_works_text" />
 
-                <TextView
-                    android:id="@+id/email_text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Email"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="14sp"
-                    app:layout_constraintTop_toBottomOf="@+id/country_spinner"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    <TextView
+                        android:id="@+id/write_to_us_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="10dp"
+                        android:drawableStart="@drawable/ic_write_to_us_black_24dp"
+                        android:drawableLeft="@drawable/ic_write_to_us_black_24dp"
+                        android:drawablePadding="16dp"
+                        android:padding="8dp"
+                        android:text="@string/write_to_us"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/contact_line_four"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
 
-                <EditText
-                    android:id="@+id/email_edit_text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginRight="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:hint="Your Email"
-                    android:inputType="textEmailAddress"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="14sp"
-                    app:layout_constraintTop_toBottomOf="@+id/email_text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    <TextView
+                        android:id="@+id/name_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/name"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/write_to_us_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
 
-                <TextView
-                    android:id="@+id/phone_text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Phone"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="14sp"
-                    app:layout_constraintTop_toBottomOf="@+id/email_edit_text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    <EditText
+                        android:id="@+id/name_edit_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:hint="@string/your_name"
+                        android:inputType="textPersonName"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/name_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
 
-                <EditText
-                    android:id="@+id/phone_edit_text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginRight="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:hint="Your Phone no"
-                    android:inputType="phone"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="14sp"
-                    app:layout_constraintTop_toBottomOf="@+id/phone_text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    <TextView
+                        android:id="@+id/country_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/country"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/name_edit_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
 
-                <TextView
-                    android:id="@+id/message_text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Phone"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="14sp"
-                    app:layout_constraintTop_toBottomOf="@+id/phone_edit_text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    <Spinner
+                        android:id="@+id/country_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:hint="@string/your_name"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/country_text" />
 
-                <EditText
-                    android:id="@+id/message_edit_text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginRight="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:hint="Your Phone no"
-                    android:inputType="phone"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textSize="14sp"
-                    app:layout_constraintTop_toBottomOf="@+id/message_text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    <View
+                        android:id="@+id/contact_line_five"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@color/semiBlack"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/country_spinner" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/confirm_language"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:paddingLeft="44dp"
-                    android:paddingTop="12dp"
-                    android:paddingRight="44dp"
-                    android:paddingBottom="12dp"
-                    android:text="SUBMIT"
-                    android:textSize="18sp"
-                    app:backgroundTint="@color/colorPrimary"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/message_edit_text"
-                    app:shapeAppearance="@style/MaterialButton" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:id="@+id/email_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/email_id"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/contact_line_five"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="24dp" />
-    </LinearLayout>
-</ScrollView>
+                    <EditText
+                        android:id="@+id/email_edit_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:hint="@string/email_id"
+                        android:inputType="textEmailAddress"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/email_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/phone_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/phone"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/email_edit_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <EditText
+                        android:id="@+id/phone_edit_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:hint="@string/your_phone"
+                        android:inputType="phone"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/phone_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/message_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/phone"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/phone_edit_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <EditText
+                        android:id="@+id/message_edit_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:hint="@string/your_phone"
+                        android:inputType="phone"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/message_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/submit_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:paddingLeft="44dp"
+                        android:paddingTop="12dp"
+                        android:paddingRight="44dp"
+                        android:paddingBottom="12dp"
+                        android:text="@string/submit"
+                        android:textSize="18sp"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/message_edit_text"
+                        app:shapeAppearance="@style/MaterialButton" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="24dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/submit_button" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

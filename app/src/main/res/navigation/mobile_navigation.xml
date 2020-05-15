@@ -9,16 +9,29 @@
         android:id="@+id/navigation_home"
         android:name="com.bcod.babysouk.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/home_fragment" />
+        tools:layout="@layout/home_fragment" >
+
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_brands"
+            app:destination="@id/navigation_brands" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_offers"
+            app:destination="@id/navigation_offers" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_wish_list"
+            app:destination="@id/navigation_wish_list" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_account"
+            app:destination="@id/navigation_account" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_brands"
         android:name="com.bcod.babysouk.ui.brands.BrandsFragment"
         android:label="@string/title_brands"
         tools:layout="@layout/brands_fragment" >
-        <action
-            android:id="@+id/action_navigation_brands_to_navigation_home"
-            app:destination="@id/navigation_home" />
+
     </fragment>
 
     <fragment
@@ -26,9 +39,7 @@
         android:name="com.bcod.babysouk.ui.offers.OffersFragment"
         android:label="@string/title_offers"
         tools:layout="@layout/offers_fragment" >
-        <action
-            android:id="@+id/action_navigation_offers_to_navigation_home"
-            app:destination="@id/navigation_home" />
+
     </fragment>
 
     <fragment
@@ -36,9 +47,7 @@
         android:name="com.bcod.babysouk.ui.wishlist.WishListFragment"
         android:label="@string/title_wish_list"
         tools:layout="@layout/wish_list_fragment" >
-        <action
-            android:id="@+id/action_navigation_wish_list_to_navigation_home"
-            app:destination="@id/navigation_home" />
+
     </fragment>
 
     <fragment
@@ -46,8 +55,74 @@
         android:name="com.bcod.babysouk.ui.account.AccountFragment"
         android:label="@string/title_account"
         tools:layout="@layout/account_fragment" >
+
         <action
-            android:id="@+id/action_navigation_account_to_navigation_home"
-            app:destination="@id/navigation_home" />
+            android:id="@+id/action_navigation_account_to_navigation_my_profile"
+            app:destination="@id/navigation_my_profile" />
+        <action
+            android:id="@+id/action_navigation_account_to_navigation_my_orders"
+            app:destination="@id/navigation_my_orders" />
+        <action
+            android:id="@+id/action_navigation_account_to_navigation_address_book"
+            app:destination="@id/navigation_address_book" />
+        <action
+            android:id="@+id/action_navigation_account_to_navigation_contact_us"
+            app:destination="@id/navigation_contact_us" />
+        <action
+            android:id="@+id/action_navigation_account_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_my_profile"
+        android:name="com.bcod.babysouk.ui.account.profile.MyProfileFragment"
+        android:label="@string/title_my_profile"
+        tools:layout="@layout/my_profile_fragment" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_my_orders"
+        android:name="com.bcod.babysouk.ui.account.orders.MyOrdersFragment"
+        android:label="@string/title_my_orders"
+        tools:layout="@layout/my_orders_fragment" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_address_book"
+        android:name="com.bcod.babysouk.ui.account.address.AddressBookFragment"
+        android:label="@string/title_address_book"
+        tools:layout="@layout/address_book_fragment">
+    <action
+        android:id="@+id/action_navigation_address_book_to_navigation_new_address"
+        app:destination="@id/navigation_add_new_address"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_contact_us"
+        android:name="com.bcod.babysouk.ui.account.contact.ContactUsFragment"
+        android:label="@string/title_contact_us"
+        tools:layout="@layout/contact_us_fragment" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.bcod.babysouk.ui.account.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/settings_fragment" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_add_new_address"
+        android:name="com.bcod.babysouk.ui.account.address.addAddress.AddAddressFragment"
+        android:label="@string/add_new_address"
+        tools:layout="@layout/add_address_fragment" >
+
+    </fragment>
+
 </navigation>

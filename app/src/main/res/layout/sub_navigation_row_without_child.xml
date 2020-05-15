@@ -14,7 +14,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:padding="8dp"
-        android:text="@string/sub_menu_baby_essentials"
+        android:text="@string/sub_menu_babyessentials_baby_essentials"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/black"
         android:textSize="18sp"

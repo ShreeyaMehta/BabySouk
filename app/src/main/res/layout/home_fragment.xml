@@ -1,88 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/star_background"
-    android:orientation="vertical"
+    android:id="@+id/home_fragment_container"
     tools:context=".ui.home.HomeFragment">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:layout_height="wrap_content">
 
-        <com.youth.banner.Banner
-            android:id="@+id/home_view_pager"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="360dp" />
-
-        <TextView
-            android:id="@+id/recently_viewed_text"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:text="Recently viewed"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textSize="18sp" />
+            android:orientation="vertical" >
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recently_viewed_recyclerview"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginTop="16dp" />
+            <com.youth.banner.Banner
+                android:id="@+id/home_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="360dp" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_marginTop="32dp"
-            android:src="@color/colorPrimary"
-            android:contentDescription="Exclusive offers" />
+            <TextView
+                android:id="@+id/recently_viewed_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="@string/recently_viewed"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textSize="18sp" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginEnd="24dp"
-            app:cardBackgroundColor="@color/red"
-            app:cardCornerRadius="12dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recently_viewed_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="16dp" />
 
-        </androidx.cardview.widget.CardView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="32dp"
+                android:src="@color/colorPrimary"
+                android:contentDescription="@string/exclusicve_offers" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginEnd="24dp"
-            app:cardBackgroundColor="@color/yellow"
-            app:cardCornerRadius="12dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginEnd="24dp"
+                app:cardBackgroundColor="@color/red"
+                app:cardCornerRadius="12dp">
 
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginEnd="24dp"
-            app:cardBackgroundColor="@color/green"
-            app:cardCornerRadius="12dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginEnd="24dp"
+                app:cardBackgroundColor="@color/yellow"
+                app:cardCornerRadius="12dp">
 
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="24dp" />
-    </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginEnd="24dp"
+                app:cardBackgroundColor="@color/green"
+                app:cardCornerRadius="12dp">
 
-</ScrollView>
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

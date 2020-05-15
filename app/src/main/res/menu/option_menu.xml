@@ -6,6 +6,7 @@
         android:orderInCategory="100"
         android:icon="@drawable/ic_search_black_24dp"
         android:title="@string/search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
         app:showAsAction="ifRoom" />
 
     <item

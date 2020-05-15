@@ -2,9 +2,11 @@ package com.bcod.babysouk.ui.home;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,15 +17,15 @@ import com.bcod.babysouk.R;
 import com.bcod.babysouk.adapter.HomeViewPagerAdapter;
 import com.bcod.babysouk.databinding.HomeFragmentBinding;
 import com.bcod.babysouk.model.HomeViewPagerItem;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.youth.banner.Banner;
 import com.youth.banner.indicator.CircleIndicator;
+
 
 public class HomeFragment extends Fragment {
 
     private HomeFragmentBinding binding;
     private HomeViewModel mHomeViewModel;
-    private Banner banner_viewpager;
-    private Context context;
 
     public static HomeFragment newInstance() {
         return new HomeFragment();
@@ -34,8 +36,10 @@ public class HomeFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         binding = HomeFragmentBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
-        banner_viewpager = view.findViewById(R.id.home_view_pager);
-        context = container.getContext();
+        binding.homeViewPager.setAdapter(new HomeViewPagerAdapter(HomeViewPagerItem.getTestData()))
+                .setIndicator(new CircleIndicator(container.getContext()))
+                .start();
+
         return view;
     }
 
@@ -44,9 +48,7 @@ public class HomeFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         mHomeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
         // TODO: Use the ViewModel
-        banner_viewpager.setAdapter(new HomeViewPagerAdapter(HomeViewPagerItem.getTestData()))
-                .setIndicator(new CircleIndicator(context))
-                .start();
+
     }
 
     @Override

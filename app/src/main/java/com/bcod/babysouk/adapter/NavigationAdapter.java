@@ -30,15 +30,18 @@ public class NavigationAdapter extends RecyclerView.Adapter {
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View view;
-        if (viewType == 1) {
+        /*if (viewType == 0) {
+            view = layoutInflater.inflate(R.layout.navigation_row_chips,parent,false);
+            return new NavigationViewHolderChips(view);
+        } else*/ if (viewType == 1) {
             view = layoutInflater.
-                    inflate(R.layout.navigation_row_with_child, parent,false);
+                    inflate(R.layout.navigation_row_with_child, parent, false);
             return new NavigationViewHolderWithChild(view);
-        } /*else if (viewType == 0) {*/
+        } else {
             view = layoutInflater.
                     inflate(R.layout.navigation_row_without_child, parent, false);
             return new NavigationViewHolderWithoutChild(view);
-
+        }
     }
 
     @Override
@@ -62,18 +65,26 @@ public class NavigationAdapter extends RecyclerView.Adapter {
     @Override
     public int getItemViewType(int position) {
         /*if (position == 0) {
-            return TYPE_HEADER;
+            return 0;
         }else {*/
             if (mNavigationItemArrayList.get(position).isExpandable()) {
                 return 1;
             } else {
-                return 0;
+                return 2;
             }
+        //}
     }
 
     @Override
     public int getItemCount() {
         return mNavigationItemArrayList.size();
+    }
+
+    static class NavigationViewHolderChips extends RecyclerView.ViewHolder {
+
+        public NavigationViewHolderChips(@NonNull View itemView) {
+            super(itemView);
+        }
     }
 
     class NavigationViewHolderWithChild extends RecyclerView.ViewHolder {
@@ -98,6 +109,7 @@ public class NavigationAdapter extends RecyclerView.Adapter {
                     changeRotate(indicatorImage, 90f, 0f).start();
                 }
             });
+
         }
     }
 
