@@ -69,7 +69,7 @@
         <!-- Customize your theme here. -->
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">18dp</item>
-        <item name="strokeColor">@color/transparent</item>
+        <item name="strokeColor">@color/semiBlack</item>
         <item name="strokeWidth">1dp</item>
     </style>
 

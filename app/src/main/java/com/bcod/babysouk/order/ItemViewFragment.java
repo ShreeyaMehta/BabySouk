@@ -11,10 +11,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
 
 import com.bcod.babysouk.R;
-import com.bcod.babysouk.adapter.ItemTablayoutPageAdapter;
+//import com.bcod.babysouk.adapter.ItemTablayoutPageAdapter;
 import com.bcod.babysouk.databinding.ItemViewFragmentBinding;
 import com.google.android.material.tabs.TabLayout;
 
@@ -36,7 +35,9 @@ public class ItemViewFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         binding = ItemViewFragmentBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
-        context = container.getContext();
+        if (container != null) {
+            context = container.getContext();
+        }
         tabLayout = view.findViewById(R.id.item_tab_layout);
         viewPager = view.findViewById(R.id.item_viewpager);
         return view;
@@ -52,9 +53,9 @@ public class ItemViewFragment extends Fragment {
         tabLayout.addTab(tabLayout.newTab().setText(R.string.delivery_returns));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.reviews));
 
-        final ItemTablayoutPageAdapter itemTablayoutPageAdapter = new ItemTablayoutPageAdapter(context, getFragmentManager(), tabLayout.getTabCount());
+        /*final ItemTablayoutPageAdapter itemTablayoutPageAdapter = new ItemTablayoutPageAdapter(context, getFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(itemTablayoutPageAdapter);
-
+*/
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

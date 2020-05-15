@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".order.brandStory.BrandStoryFragment">
+
+    <ImageView
+        android:id="@+id/brand_story_brand_img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/cuddledery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/brand_story_brand_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/brand_story_brand_img"
+        android:layout_marginStart="172dp"
+        android:layout_marginLeft="172dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Cuddledry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/brand_story_brand_img" />
+
+    <TextView
+        android:id="@+id/brand_story_brand_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="Cuddledry was founded in 2006 by us two mums and long term friends - Polly and Helen - after the births of our first children. After realising everyone faced the same stressful juggling act with towel and baby at bathtime, we decided there was a simple solution to make everyone’s lives easier and safer."
+        app:layout_constraintTop_toBottomOf="@id/brand_story_brand_name"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/brand_story_view_collection"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/brand_story_brand_details"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/only_border"
+        android:backgroundTint="@color/transparent"
+        android:text="View Collection"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/brand_story_brand_details" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
