@@ -1021,7 +1021,17 @@
     <string name="area">Area</string>
     <string name="current_location">Use Current Location</string>
     <string name="save_address">Save Address</string>
-
+    <string name="send_gift_to">Send Gift to</string>
+    <string name="choose_gift_ribbon">Choose Gift Ribbon</string>
+    <string name="selcet_gift_tag">Select Gift Tag</string>
+    <string name="add_message">Add Message</string>
+    <string name="someone_new">Is this for someone new?</string>
+    <string name="personalise_message">Personalise Greeting message</string>
+    <string name="message_hint">Please type here the messageas you want it to appear on the gift tag.
+                                     It will be written word for word.</string>
+    <string name="instructions_for_babysouk_hint">PLease type here any further wrapping or special delivery instructions
+                                               you would like us to take note of.</string>
+    <string name="instructions_for_babysouk">Instructions for Babysouk</string>
 
 
 </resources>

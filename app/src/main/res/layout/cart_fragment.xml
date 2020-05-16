@@ -316,7 +316,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/cart_checkout_btn"
         android:layout_width="match_parent"
-        android:layout_height="54dp"
+        android:layout_height="56dp"
         android:text="@string/checkout"
         android:textColor="@color/white"
         android:backgroundTint="@color/colorPrimary"
