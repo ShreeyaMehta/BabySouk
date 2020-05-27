@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.bcod.babysouk.R;
+import com.bcod.babysouk.databinding.DeliveryAddressFragmentBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class DeliveryAddressFragment extends Fragment {
@@ -33,9 +34,17 @@ public class DeliveryAddressFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         mDeliveryAddressViewModel = new ViewModelProvider(this).get(DeliveryAddressViewModel.class);
         // TODO: Use the ViewModel
+    }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         BottomNavigationView bottomNavigationView = getActivity().findViewById(R.id.bottom_nav_view);
         bottomNavigationView.setVisibility(View.GONE);
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+    }
 }

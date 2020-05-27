@@ -53,9 +53,6 @@ public class ItemViewFragment extends Fragment {
         tabLayout.addTab(tabLayout.newTab().setText(R.string.delivery_returns));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.reviews));
 
-        /*final ItemTablayoutPageAdapter itemTablayoutPageAdapter = new ItemTablayoutPageAdapter(context, getFragmentManager(), tabLayout.getTabCount());
-        viewPager.setAdapter(itemTablayoutPageAdapter);
-*/
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

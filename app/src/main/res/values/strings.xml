@@ -34,22 +34,6 @@
     <string name="menu_by_brand">By Brand</string>
     <string name="menu_contact">Contact</string>
 
-    <!--Navigation child menu-->
-    <string name="sub_menu_baby_essentials">Baby Essentials</string>
-    <string name="sub_menu_clothing_and_accessories"><![CDATA[Clothing & Accessories]]></string>
-    <string name="sub_menu_decor">Décor</string>
-    <string name="sub_menu_carriers_and_wraps"><![CDATA[Carriers & Wraps]]></string>
-    <string name="sub_menu_sleep_essentials">Sleep Essentials</string>
-    <string name="sub_menu_active_and_safe_parenting"><![CDATA[Active & Safe Parenting]]></string>
-    <string name="sub_menu_all_about_mum">All About Mum</string>
-
-    <!--Navigation sub child menu-->
-    <string name="extra_sub_menu_baby_gifts">Baby Gifts</string>
-    <string name="extra_sub_menu_babaysuits_and_onesies"><![CDATA[Babysuits & Onesies]]></string>
-    <string name="extra_sub_menu_nightwear">Nightwear</string>
-    <string name="extra_sub_menu_socks_shoes_and_hats"><![CDATA[Socks, Shoes & Hats]]></string>
-    <string name="extra_sub_menu_swimwear_and_swim_towels"><![CDATA[Swimwear & Swim Towels]]></string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
@@ -576,7 +560,7 @@
 
     <!--Navigation child menu-->
     <string name="sub_menu_babyessentials_baby_essentials">BABY ESSENTIALS</string>
-    <string name="sub_menu_babyessentials_clothing_and_accessories"><![CDATA[CLOTHING AND ACCESSORIES]]></string>
+    <string name="sub_menu_babyessentials_clothing_and_accessories"><![CDATA[Clothing & Accessories]]></string>
     <string name="sub_menu_babyessentials_decor">DECOR</string>
     <string name="sub_menu_babyessentials_carriers_and_wraps"><![CDATA[CARRIERS & WRAPS]]></string>
     <string name="sub_menu_babyessentials_sleep_essentials">SLEEP ESSENTIALS</string>
@@ -1032,6 +1016,28 @@
     <string name="instructions_for_babysouk_hint">PLease type here any further wrapping or special delivery instructions
                                                you would like us to take note of.</string>
     <string name="instructions_for_babysouk">Instructions for Babysouk</string>
-
+    <string name="filter">Filter</string>
+    <string name="sort">Sort</string>
+    <string name="clothing">Clothing</string>
+    <string name="sort_by">Sort By</string>
+    <string name="defualt_order">Default Order</string>
+    <string name="newest">Newest</string>
+    <string name="lowest_price">Lowest Price</string>
+    <string name="highest_price">Highest Price</string>
+    <string name="filterby">Filter By</string>
+    <string name="clear_filter">Clear Filter</string>
+    <string name="category">Category</string>
+    <string name="price">Price</string>
+    <string name="color">Color</string>
+    <string name="close">Close</string>
+    <string name="apply">Apply</string>
+    <string name="baby_gear"><![CDATA[Baby Gear & Essentials ]]></string>
+    <string name="featured">Featured Souks</string>
+    <string name="feeding">Feeding</string>
+    <string name="toys_books"><![CDATA[Baby Toys & Books]]></string>
+    <string name="aed_0_100">AED 0–100</string>
+    <string name="aed_100_200">AED 100–200</string>
+    <string name="aed_200_500">AED 200–500</string>
+    <string name="aed_500_1000">AED 500–1000</string>
 
 </resources>

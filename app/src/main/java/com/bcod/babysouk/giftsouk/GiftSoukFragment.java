@@ -1,4 +1,4 @@
-package com.bcod.babysouk.drawer.giftsouk;
+package com.bcod.babysouk.giftsouk;
 
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,13 +17,15 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.bcod.babysouk.R;
+import com.bcod.babysouk.ui.account.address.AddressBookFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class GiftSoukFragment extends Fragment {
 
     private GiftSoukViewModel mGiftSoukViewModel;
     private ConstraintLayout send_gift_to, choose_gift_ribbon, choose_tag, add_message;
     private TextView send_gift, choose_ribbon, select_tag, add_message_tv;
-    private ImageView img_send_to, img_choose_ribbon, img_select_tag, img_add_message;
+    private ImageView img_send_to, img_choose_ribbon, img_select_tag, img_add_message, img_address_book;
 
 
     public static GiftSoukFragment newInstance() {
@@ -45,6 +48,7 @@ public class GiftSoukFragment extends Fragment {
         img_add_message = root.findViewById(R.id.show_add_message);
         img_choose_ribbon = root.findViewById(R.id.show_choose_ribbon);
         img_select_tag = root.findViewById(R.id.show_select_tag);
+        img_address_book = root.findViewById(R.id.go_to_saved_address);
         return root;
     }
 
@@ -58,6 +62,10 @@ public class GiftSoukFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        BottomNavigationView bottomNavigationView = getActivity().findViewById(R.id.bottom_nav_view);
+        bottomNavigationView.setVisibility(View.GONE);
+
         send_gift.setOnClickListener(view14 -> {
             changeVisibility(send_gift_to);
             changeRotate(img_send_to, 0, 90f).start();
@@ -90,7 +98,10 @@ public class GiftSoukFragment extends Fragment {
             choose_tag.setVisibility(View.GONE);
         });
 
-
+        img_address_book.setOnClickListener(view15 -> {
+            AddressBookFragment save_address_book = new AddressBookFragment();
+            Toast.makeText(getActivity(), "Go To AddressBookFragment", Toast.LENGTH_SHORT).show();
+        });
     }
 
     private void changeVisibility(ConstraintLayout constraintLayout){
@@ -106,5 +117,24 @@ public class GiftSoukFragment extends Fragment {
         objectAnimator.setDuration(300);
         objectAnimator.setInterpolator(new LinearInterpolator());
         return objectAnimator;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        send_gift_to = null;
+        choose_gift_ribbon = null;
+        choose_tag = null;
+        add_message = null;
+        send_gift = null;
+        choose_ribbon = null;
+        select_tag = null;
+        add_message_tv = null;
+        img_send_to = null;
+        img_choose_ribbon = null;
+        img_select_tag = null;
+        img_add_message = null;
+        img_address_book = null;
+
     }
 }

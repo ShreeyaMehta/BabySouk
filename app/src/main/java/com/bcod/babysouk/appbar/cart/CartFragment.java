@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.bcod.babysouk.R;
 import com.bcod.babysouk.databinding.ActivityMainBinding;
+import com.bcod.babysouk.databinding.CartFragmentBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class CartFragment extends Fragment {
@@ -29,8 +30,6 @@ public class CartFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.cart_fragment, container, false);
-        delivery_address = root.findViewById(R.id.cart_delivery_address);
-
         return root;
     }
 
@@ -39,16 +38,27 @@ public class CartFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         mCartViewModel = new ViewModelProvider(this).get(CartViewModel.class);
         // TODO: Use the ViewModel
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         BottomNavigationView bottomNavigationView = getActivity().findViewById(R.id.bottom_nav_view);
         bottomNavigationView.setVisibility(View.GONE);
 
-        delivery_address.setOnClickListener(view -> ((your_Address)getActivity()).yourDeliveryAdress());
-
+        delivery_address = view.findViewById(R.id.cart_delivery_address);
+        delivery_address.setOnClickListener(view1 -> ((your_Address)getActivity()).yourDeliveryAdress());
 
     }
 
     public interface your_Address{
         void yourDeliveryAdress();
     }
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        delivery_address = null;
+    }
+
 
 }

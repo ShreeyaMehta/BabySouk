@@ -1,4 +1,4 @@
-package com.bcod.babysouk.drawer.giftsouk;
+package com.bcod.babysouk.giftsouk;
 
 import androidx.lifecycle.ViewModel;
 
